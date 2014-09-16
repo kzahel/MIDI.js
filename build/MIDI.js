@@ -103,7 +103,7 @@ MIDI.loadPlugin = function(conf) {
 		}
 	};
 	///
-	MIDI.soundfontUrl = conf.soundfontUrl || MIDI.soundfontUrl || "./soundfont/";
+	MIDI.soundfontUrl = conf.soundfontUrl || MIDI.soundfontUrl || "./MIDI.js/soundfont/";
 	/// Detect the best type of audio to use.
 	MIDI.audioDetect(function(types) {
 		var api = "";
@@ -211,6 +211,7 @@ var apis = {
 };
 
 var addSoundfont = function(text) {
+    return // chrome app needs to manually insert instead
 	var script = document.createElement("script");
 	script.language = "javascript";
 	script.type = "text/javascript";
